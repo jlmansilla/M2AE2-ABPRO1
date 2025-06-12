@@ -1,34 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>Contacto</title>
-  </head>
-  <body>
-    <header>
-      <h1>Pagina contacto</h1>
-    </header>
-    <main>
-      <section>
-        <form>
-            <label>Nombre</label>
-            <input type="text">
-            <label>Correo</label>
-            <input type="email">
-            <label for="">Mensaje</label>
-            <textarea name="" id=""></textarea>
-            <button>Enviar</button>
-            
-        </form>
-      </section>
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+    crossorigin="anonymous"
+  />
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <header class="bg-light p-3 border-bottom">
+    <div class="container">
+      <h1 class="h3 mb-3">Página de Contacto</h1>
+      <nav>
+        <p class="mb-0"><a href="./index.html">Inicio</a> | Contacto | Quienes somos</p>
+      </nav>
+    </div>
+  </header>
 
-   
+  <main class="flex-grow-1 container my-4">
+    
+    <section class="mb-4 border border-danger border-5">
+      <p class="p-3 mb-0">
+        ¿Tienes alguna pregunta o necesitas más información sobre nuestros productos? 
+        No dudes en contactarnos. Estamos aquí para ayudarte y responder todas tus consultas.
+      </p>
+    </section>
 
-    <footer>
-      <p>&copy; Grupo Sala 5 2025</p>
-    </footer>
-  </body>
+    <section>
+      <h2 class="h5 mb-3">Formulario de Contacto</h2>
+
+      <!-- Layout formulario según tamaños -->
+      <div class="container">
+
+        <!-- XS: apilado simple 2x2 -->
+        <div class="d-block d-sm-none">
+          <form>
+            <div class="row gy-3">
+              <!-- Fila 1: Nombre + Correo -->
+              <div class="col-6 border border-primary border-5 border-end-0">
+                <div class="p-2">
+                  <label for="nombre-xs" class="form-label small">Nombre</label>
+                  <input type="text" class="form-control form-control-sm" id="nombre-xs" placeholder="Tu nombre" required>
+                </div>
+              </div>
+              <div class="col-6 border border-primary border-5 border-start-0">
+                <div class="p-2">
+                  <label for="correo-xs" class="form-label small">Correo</label>
+                  <input type="email" class="form-control form-control-sm" id="correo-xs" placeholder="tu@email.com" required>
+                </div>
+              </div>
+              <!-- Fila 2: Mensaje + Botón -->
+              <div class="col-6 border border-success border-5 border-end-0">
+                <div class="p-2">
+                  <label for="mensaje-xs" class="form-label small">Mensaje</label>
+                  <textarea class="form-control form-control-sm" id="mensaje-xs" rows="2" placeholder="Tu mensaje" required></textarea>
+                </div>
+              </div>
+              <div class="col-6 border border-success border-5 border-start-0 d-flex align-items-end">
+                <div class="p-2 w-100">
+                  <button type="submit" class="btn btn-primary btn-sm w-100">Enviar</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- SM: 4 columnas en una fila -->
+        <div class="d-none d-sm-block d-md-none">
+          <form>
+            <div class="row gy-3">
+              <div class="col-sm-3 border border-primary border-5">
+                <div class="p-2">
+                  <label for="nombre-sm" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre-sm" placeholder="Tu nombre" required>
+                </div>
+              </div>
+              <div class="col-sm-3 border border-success border-end-0 border-5">
+                <div class="p-2">
+                  <label for="correo-sm" class="form-label">Correo</label>
+                  <input type="email" class="form-control" id="correo-sm" placeholder="tu@email.com" required>
+                </div>
+              </div>
+              <div class="col-sm-3 border border-success border-start-0 border-end-0 border-5">
+                <div class="p-2">
+                  <label for="mensaje-sm" class="form-label">Mensaje</label>
+                  <textarea class="form-control" id="mensaje-sm" rows="3" placeholder="Escribe tu mensaje aquí" required></textarea>
+                </div>
+              </div>
+              <div class="col-sm-3 border border-success border-start-0 border-5 d-flex align-items-end">
+                <div class="p-2 w-100">
+                  <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- MD+: Layout complejo con 2 columnas principales -->
+        <div class="d-none d-md-block">
+          <form>
+            <div class="row gy-3">
+              <!-- Columna izquierda: Datos personales -->
+              <div class="col-md-6 border border-primary border-5 border-end-0">
+                <div class="p-3">
+                  <h3 class="h6 mb-3">Información Personal</h3>
+                  <div class="row gy-2">
+                    <div class="col-12">
+                      <label for="nombre-md" class="form-label">Nombre Completo</label>
+                      <input type="text" class="form-control" id="nombre-md" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="col-12">
+                      <label for="correo-md" class="form-label">Correo Electrónico</label>
+                      <input type="email" class="form-control" id="correo-md" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="col-12">
+                      <label for="telefono-md" class="form-label">Teléfono (opcional)</label>
+                      <input type="tel" class="form-control" id="telefono-md" placeholder="+56 9 1234 5678">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Columna derecha: Mensaje y botón -->
+              <div class="col-md-6 border border-success border-5 border-start-0">
+                <div class="p-3 h-100 d-flex flex-column">
+                  <h3 class="h6 mb-3">Tu Mensaje</h3>
+                  <div class="flex-grow-1 d-flex flex-column">
+                    <label for="mensaje-md" class="form-label">Mensaje</label>
+                    <textarea class="form-control flex-grow-1" id="mensaje-md" rows="6" placeholder="Escribe tu mensaje aquí. Cuéntanos qué productos te interesan o qué dudas tienes." required></textarea>
+                  </div>
+                  <div class="mt-3">
+                    <button type="submit" class="btn btn-primary btn-lg w-100">Enviar Mensaje</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3 mt-auto">
+    <p class="mb-0">&copy; JLMN 2025</p>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous">
+  </script>
+</body>
 </html>
